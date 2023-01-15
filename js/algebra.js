@@ -132,6 +132,15 @@ class GA2
         
     }
 
+    dual(v)
+    {
+        // calculates the dual of a vector
+        // let the dual be v
+        // then v*=v*inv(I) where I is the pseudoscalar belonging to the algebra
+        // here the algebra is GA2 or R(2,0,0)
+        return this.multiply(v,this.inv([0,0,0,1]))
+    }
+
     ROUND(p)
     {
         for(let i=0;i<4;i++)
